@@ -40,7 +40,7 @@ const TaskDetails = () => {
       setLoading(true); // Start loading
       try {
         const response = await fetch(
-          `https://hackathon-backend-1-c3f5.onrender.com/task/task/${id}`,
+          `https://task-management-17wt.onrender.com/task/task/${id}`,
           {
             method: "GET",
             credentials: "include",
@@ -59,7 +59,7 @@ const TaskDetails = () => {
 
         // Fetch subtasks
         const subtaskResponse = await fetch(
-          `https://hackathon-backend-1-c3f5.onrender.com/task/task/${id}/subtasks`,
+          `https://task-management-17wt.onrender.com/task/task/${id}/subtasks`,
           {
             method: "GET",
             credentials: "include",
@@ -95,7 +95,7 @@ const TaskDetails = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `https://hackathon-backend-1-c3f5.onrender.com/task/task/${id}/add-activity`,
+        `https://task-management-17wt.onrender.com/task/task/${id}/add-activity`,
         {
           method: "POST",
           credentials: "include",
@@ -111,7 +111,7 @@ const TaskDetails = () => {
       }
 
       const updatedResponse = await fetch(
-        `https://hackathon-backend-1-c3f5.onrender.com/task/task/${id}`,
+        `https://task-management-17wt.onrender.com/task/task/${id}`,
         {
           method: "GET",
           credentials: "include",
@@ -144,7 +144,7 @@ const TaskDetails = () => {
     try {
       // console.log("new subtask is,",newSubtask);
       const response = await fetch(
-        `https://hackathon-backend-1-c3f5.onrender.com/task/task/${id}/subtasks`,
+        `https://task-management-17wt.onrender.com/task/task/${id}/subtasks`,
         {
           method: "POST",
           credentials: "include",
@@ -172,7 +172,7 @@ const TaskDetails = () => {
   const handleUpdateSubtask = async (subtaskId) => {
     try {
       const response = await fetch(
-        `https://hackathon-backend-1-c3f5.onrender.com/task/task/${id}/subtasks/${subtaskId}`,
+        `https://task-management-17wt.onrender.com/task/task/${id}/subtasks/${subtaskId}`,
         {
           method: "PUT",
           credentials: "include",

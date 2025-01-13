@@ -30,7 +30,7 @@ const CreateTask = ({ onClose }) => {
 
     try {
       const response = await fetch(
-        "https://hackathon-backend-1-c3f5.onrender.com/task/create",
+        "https://task-management-17wt.onrender.com/task/create",
         {
           method: "POST",
           headers: {
@@ -59,7 +59,7 @@ const CreateTask = ({ onClose }) => {
   const getUsers = async () => {
     try {
       const response = await fetch(
-        "https://hackathon-backend-1-c3f5.onrender.com/auth/users",
+        "https://task-management-17wt.onrender.com/auth/users",
         {
           method: "GET",
           credentials: "include",

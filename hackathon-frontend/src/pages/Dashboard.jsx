@@ -32,7 +32,7 @@ const Dashboard = () => {
       }
 
       const response = await fetch(
-        "https://hackathon-backend-1-c3f5.onrender.com/task/tasks",
+        "https://task-management-17wt.onrender.com/task/tasks",
         {
           method: "GET",
           credentials: "include",

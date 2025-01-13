@@ -56,7 +56,7 @@ const Profile = () => {
           }
 
           const response = await fetch(
-            `https://hackathon-backend-1-c3f5.onrender.com/auth/users/${userId}`,
+            `https://task-management-17wt.onrender.com/auth/users/${userId}`,
             {
               method: "GET",
               headers: {

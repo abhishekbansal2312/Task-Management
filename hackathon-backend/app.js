@@ -33,7 +33,7 @@ const connectDB = async () => {
 
 // Middleware setup
 const corsOptions = {
-  origin: "https://meek-heliotrope-237935.netlify.app", // Replace with your frontend's URL
+  origin: "https://timely-entremet-ff9eb7.netlify.app", // Replace with your frontend's URL
   credentials: true, // Allow credentials (cookies, authorization headers)
   optionsSuccessStatus: 200,
 };

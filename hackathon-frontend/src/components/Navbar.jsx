@@ -14,7 +14,7 @@ const Navbar = () => {
   const [userName, setUserName] = useState("");
 
   function handleLogout() {
-    const url = "https://hackathon-backend-1-c3f5.onrender.com/auth/logout";
+    const url = "https://task-management-17wt.onrender.com/auth/logout";
     fetch(url, {
       method: "DELETE",
       credentials: "include",
