@@ -1,0 +1,251 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* bubble animation in login page */
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: bubble linear infinite;
+}
+
+.bubble:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  left: 20%;
+  animation-duration: 10s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  left: 60%;
+  animation-duration: 12s;
+  animation-delay: -2s;
+}
+
+.bubble:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+.bubble:nth-child(5) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+.bubble:nth-child(6) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+.bubble:nth-child(7) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+.bubble:nth-child(8) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+
+/* box shadow of login page */
+.custom-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1),
+    0 -4px 6px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*  glow effect */
+/* Add this to your global CSS file or in a styled component */
+/* Add this to your global CSS file or in a styled component */
+/* Add this to your global CSS file or in a styled component */
+.glow {
+  text-shadow: 
+    0 0 3px rgba(255, 255, 255, 0.8),
+    0 0 6px rgba(255, 255, 255, 0.8),
+    0 0 9px rgba(255, 255, 255, 0.8),
+    0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+/* src/styles/customStyles.css */
+
+/* Style for the Add User button */
+.add-user-button {
+  background-color: #1890ff; /* Primary color */
+  border-color: #1890ff; /* Border color */
+  color: #fff; /* Text color */
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.add-user-button:hover {
+  background-color: #40a9ff; /* Hover background color */
+  border-color: #40a9ff; /* Hover border color */
+}
+
+/* Style for the Add User modal */
+.add-user-modal .ant-modal-content {
+  border-radius: 8px; /* Rounded corners */
+}
+
+.add-user-modal .ant-modal-header {
+  background-color: #1890ff; /* Header background color */
+  color: #fff; /* Header text color */
+}
+
+.add-user-modal .ant-modal-title {
+  font-size: 18px; /* Larger title font size */
+  font-weight: bold; /* Bold title */
+}
+
+.add-user-modal .ant-form-item-label > label {
+  font-weight: bold; /* Bold form labels */
+}
+
+.add-user-modal .ant-form-item-control-input {
+  border-radius: 4px; /* Rounded corners for inputs */
+}
+
+.add-user-modal .ant-btn-primary {
+  background-color: #1890ff; /* Primary button color */
+  border-color: #1890ff; /* Primary button border color */
+}
+
+.add-user-modal .ant-btn-primary:hover {
+  background-color: #40a9ff; /* Primary button hover color */
+  border-color: #40a9ff; /* Primary button hover border color */
+}
+/* src/index.css or src/App.css */
+body {
+  @apply bg-white text-black;
+}
+
+body.dark {
+  @apply bg-black text-white;
+}
+
+/* App.css or a dedicated CSS file */
+
+.theme-toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--toggle-background-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--toggle-background-color-hover);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.theme-icon.sun {
+  transform: rotate(0deg);
+}
+
+.theme-icon.moon {
+  transform: rotate(360deg);
+}
+
+.theme-icon.sun.animate {
+  transform: rotate(360deg);
+}
+
+.theme-icon.moon.animate {
+  transform: rotate(0deg);
+}
+
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Users.css */
+.dark-table-header .ant-table-thead > tr > th {
+  background-color: black !important; /* Change header background to black */
+  color: white !important;            /* Change header text to white */
+}
+/* Ensure this CSS is added to the file that is imported in your component */
+.small-icon .vertical-timeline-element-icon {
+  font-size: 24px; /* Adjust the size as needed */
+}
+

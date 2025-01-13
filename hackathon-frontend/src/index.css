@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.add-user-modal .ant-modal-header {
+    background-color: transparent !important; /* Remove the blue background */
+  }
+  .add-user-modal .ant-modal-title {
+    color: #000; /* Optional: Change the title color if needed */
+  }
+  /* Users.css */
+.dark-table-header .ant-table-thead > tr > th {
+  background-color: black !important; /* Change header background to black */
+  color: white !important;            /* Change header text to white */
+}
+
+
+
+/* icon spining speed */
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slow-spin {
+  animation: slow-spin 3s linear infinite; /* Adjust the 5s to control the speed */
+}
