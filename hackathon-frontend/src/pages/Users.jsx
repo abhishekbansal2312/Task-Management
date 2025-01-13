@@ -33,16 +33,13 @@ const Users = () => {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        "https://task-management-17wt.onrender.com/auth/users",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        }
-      );
+      const response = await fetch("http://localhost:3006/auth/users", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+      });
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -79,17 +76,14 @@ const Users = () => {
   const handleOkAdd = async () => {
     try {
       const values = await form.validateFields();
-      const response = await fetch(
-        "https://task-management-17wt.onrender.com/auth/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
-          credentials: "include",
-        }
-      );
+      const response = await fetch("http://localhost:3006/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+        credentials: "include",
+      });
 
       if (!response.ok) {
         throw new Error("Failed to add user");
@@ -106,7 +100,7 @@ const Users = () => {
     try {
       const values = await form.validateFields();
       const response = await fetch(
-        `https://task-management-17wt.onrender.com/auth/users/${currentUser._id}`,
+        `http://localhost:3006/auth/users/${currentUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -139,7 +133,7 @@ const Users = () => {
   const handleDelete = async (userId) => {
     try {
       const response = await fetch(
-        `https://task-management-17wt.onrender.com/auth/users/${userId}`,
+        `http://localhost:3006/auth/users/${userId}`,
         {
           method: "DELETE",
           headers: {

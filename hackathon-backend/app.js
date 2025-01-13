@@ -20,10 +20,7 @@ if (!process.env.DB_URI) {
 // Connect to MongoDB
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.DB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.DB_URI);
     console.log("Connected to the database");
   } catch (err) {
     console.error("Database connection error:", err.message);
@@ -33,9 +30,10 @@ const connectDB = async () => {
 
 // Middleware setup
 const corsOptions = {
-  origin: "https://timely-entremet-ff9eb7.netlify.app", // Replace with your frontend's URL
+  // origin: "https://timely-entremet-ff9eb7.netlify.app", // Replace with your frontend's URL
+  origin: "http://localhost:3000",
   credentials: true, // Allow credentials (cookies, authorization headers)
-  optionsSuccessStatus: 200,
+  // optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));

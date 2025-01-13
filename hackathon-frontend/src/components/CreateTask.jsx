@@ -12,7 +12,6 @@ const CreateTask = ({ onClose }) => {
   const [deadlineDate, setDeadlineDate] = useState("");
   const [team, setTeam] = useState([]);
   const [selectedTeam, setSelectedTeam] = useState([]);
-  const [error, setError] = useState(null);
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -29,17 +28,14 @@ const CreateTask = ({ onClose }) => {
     };
 
     try {
-      const response = await fetch(
-        "https://task-management-17wt.onrender.com/task/create",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newTask),
-          credentials: "include",
-        }
-      );
+      const response = await fetch("http://localhost:3006/task/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newTask),
+        credentials: "include",
+      });
 
       if (response.ok) {
         const result = await response.json();
@@ -55,19 +51,16 @@ const CreateTask = ({ onClose }) => {
     }
   };
 
-  // function to get all users from database
+  // Function to get all users from the database
   const getUsers = async () => {
     try {
-      const response = await fetch(
-        "https://task-management-17wt.onrender.com/auth/users",
-        {
-          method: "GET",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch("http://localhost:3006/auth/users", {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (response.ok) {
         const data = await response.json();
@@ -97,7 +90,7 @@ const CreateTask = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50">
-      <div className="relative mt-10   bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
+      <div className="relative mt-10 bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-lg"
@@ -106,11 +99,6 @@ const CreateTask = ({ onClose }) => {
           &times;
         </button>
         <h1 className="text-2xl font-semibold mb-4">Create New Task</h1>
-        {error && (
-          <div className="mb-4 text-red-500">
-            <p>{error}</p>
-          </div>
-        )}
         <form
           onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
@@ -180,7 +168,6 @@ const CreateTask = ({ onClose }) => {
               aria-required="true"
             />
           </div>
-          {/* selectin team members */}
           <div className="col-span-2">
             <label className="block text-gray-700">Team:</label>
             <div className="mt-2 flex flex-wrap gap-4">

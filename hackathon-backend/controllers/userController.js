@@ -57,9 +57,10 @@ const login = async (req, res) => {
 
     // Set token in HTTP-only cookie
     res.cookie("token", token, {
-      secure: process.env.NODE_ENV === "production", // true for production
       maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
-      httpOnly: true,
+      sameSite: "None", // Allow cross-origin
+      secure: true, // Required for cross-origin cookies
+      httpOnly: false, // Allow client-side access
     });
 
     res.json({ message: "Login successful" });

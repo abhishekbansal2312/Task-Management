@@ -14,7 +14,7 @@ const Navbar = () => {
   const [userName, setUserName] = useState("");
 
   function handleLogout() {
-    const url = "https://task-management-17wt.onrender.com/auth/logout";
+    const url = "http://localhost:3006/auth/logout";
     fetch(url, {
       method: "DELETE",
       credentials: "include",
