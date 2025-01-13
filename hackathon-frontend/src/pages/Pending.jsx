@@ -45,7 +45,7 @@ const Pending = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://task-management-backend-a9ud.onrender.com//task/tasks",
+        "https://task-management-backend-a9ud.onrender.com/task/tasks",
         {
           method: "GET",
           credentials: "include",
@@ -92,7 +92,7 @@ const Pending = () => {
   const handleDeleteTask = async (taskId) => {
     try {
       const response = await fetch(
-        `https://task-management-backend-a9ud.onrender.com//task/delete/${taskId}`,
+        `https://task-management-backend-a9ud.onrender.com/task/delete/${taskId}`,
         {
           method: "DELETE",
           credentials: "include",

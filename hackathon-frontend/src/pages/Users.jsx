@@ -34,7 +34,7 @@ const Users = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://task-management-backend-a9ud.onrender.com//auth/users",
+        "https://task-management-backend-a9ud.onrender.com/auth/users",
         {
           method: "GET",
           headers: {
@@ -80,7 +80,7 @@ const Users = () => {
     try {
       const values = await form.validateFields();
       const response = await fetch(
-        "https://task-management-backend-a9ud.onrender.com//auth/register",
+        "https://task-management-backend-a9ud.onrender.com/auth/register",
         {
           method: "POST",
           headers: {
@@ -106,7 +106,7 @@ const Users = () => {
     try {
       const values = await form.validateFields();
       const response = await fetch(
-        `https://task-management-backend-a9ud.onrender.com//auth/users/${currentUser._id}`,
+        `https://task-management-backend-a9ud.onrender.com/auth/users/${currentUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -139,7 +139,7 @@ const Users = () => {
   const handleDelete = async (userId) => {
     try {
       const response = await fetch(
-        `https://task-management-backend-a9ud.onrender.com//auth/users/${userId}`,
+        `https://task-management-backend-a9ud.onrender.com/auth/users/${userId}`,
         {
           method: "DELETE",
           headers: {

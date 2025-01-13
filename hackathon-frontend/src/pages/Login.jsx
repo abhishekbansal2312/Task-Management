@@ -16,7 +16,7 @@ const Login = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        "https://task-management-backend-a9ud.onrender.com//auth/login",
+        "https://task-management-backend-a9ud.onrender.com/auth/login",
         {
           method: "POST",
           headers: {
