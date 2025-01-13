@@ -60,7 +60,6 @@ const login = async (req, res) => {
       secure: process.env.NODE_ENV === "production", // true for production
       maxAge: 7 * 24 * 60 * 60 * 1000, // 1 week
       httpOnly: true,
-      sameSite: "strict", // Prevent cross-site issues
     });
 
     res.json({ message: "Login successful" });
