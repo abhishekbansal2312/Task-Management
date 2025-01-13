@@ -29,7 +29,7 @@ const CreateTask = ({ onClose }) => {
 
     try {
       const response = await fetch(
-        "https://task-management-17wt.onrender.com/task/create",
+        "https://task-management-backend-a9ud.onrender.com//task/create",
         {
           method: "POST",
           headers: {
@@ -58,7 +58,7 @@ const CreateTask = ({ onClose }) => {
   const getUsers = async () => {
     try {
       const response = await fetch(
-        "https://task-management-17wt.onrender.com/auth/users",
+        "https://task-management-backend-a9ud.onrender.com//auth/users",
         {
           method: "GET",
           credentials: "include",
