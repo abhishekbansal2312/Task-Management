@@ -30,8 +30,8 @@ const connectDB = async () => {
 
 // Middleware setup
 const corsOptions = {
-  // origin: "https://timely-entremet-ff9eb7.netlify.app", // Replace with your frontend's URL
-  origin: "http://localhost:3000",
+  origin: "https://timely-entremet-ff9eb7.netlify.app", // Replace with your frontend's URL
+  // origin: "http://localhost:3000",
   credentials: true, // Allow credentials (cookies, authorization headers)
   // optionsSuccessStatus: 200,
 };

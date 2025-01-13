@@ -44,13 +44,16 @@ const Completed = () => {
   const fetchTasks = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:3006/task/tasks", {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://task-management-17wt.onrender.com/task/tasks",
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const data = await response.json();
       if (data) {
@@ -89,7 +92,7 @@ const Completed = () => {
   const handleDeleteTask = async (taskId) => {
     try {
       const response = await fetch(
-        `http://localhost:3006/task/delete/${taskId}`,
+        `https://task-management-17wt.onrender.com/task/delete/${taskId}`,
         {
           method: "DELETE",
           credentials: "include",

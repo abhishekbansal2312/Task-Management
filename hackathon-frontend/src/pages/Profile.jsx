@@ -56,7 +56,7 @@ const Profile = () => {
           }
 
           const response = await fetch(
-            `http://localhost:3006/auth/users/${userId}`,
+            `https://task-management-17wt.onrender.com/auth/users/${userId}`,
             {
               method: "GET",
               headers: {

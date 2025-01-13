@@ -15,14 +15,17 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:3006/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://task-management-17wt.onrender.com/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+          credentials: "include",
+        }
+      );
 
       if (!response.ok) {
         // Extract the error message from the response

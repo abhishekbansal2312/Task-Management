@@ -28,14 +28,17 @@ const CreateTask = ({ onClose }) => {
     };
 
     try {
-      const response = await fetch("http://localhost:3006/task/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newTask),
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://task-management-17wt.onrender.com/task/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newTask),
+          credentials: "include",
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();
@@ -54,13 +57,16 @@ const CreateTask = ({ onClose }) => {
   // Function to get all users from the database
   const getUsers = async () => {
     try {
-      const response = await fetch("http://localhost:3006/auth/users", {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://task-management-17wt.onrender.com/auth/users",
+        {
+          method: "GET",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
